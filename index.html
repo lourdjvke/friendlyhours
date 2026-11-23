@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Friendly Hours — Deploy Test</title>
+  <title>Friendly Hours — Light Mode</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
@@ -12,19 +12,20 @@
       align-items: center;
       justify-content: center;
       font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-      background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
-      color: #e2e8f0;
+      background: linear-gradient(135deg, #f8fafc 0%, #e0f2fe 50%, #f0f9ff 100%);
+      color: #0f172a;
       overflow: hidden;
     }
     .card {
-      background: rgba(30, 41, 59, 0.8);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(148, 163, 184, 0.2);
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(148, 163, 184, 0.25);
       border-radius: 24px;
       padding: 3rem 2.5rem;
       text-align: center;
       max-width: 480px;
-      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 25px 50px -12px rgba(14, 165, 233, 0.15),
+                  0 8px 16px -8px rgba(0, 0, 0, 0.08);
       animation: fadeIn 0.8s ease-out;
     }
     @keyframes fadeIn {
@@ -34,7 +35,7 @@
     h1 {
       font-size: 2.25rem;
       font-weight: 700;
-      background: linear-gradient(90deg, #38bdf8, #818cf8);
+      background: linear-gradient(90deg, #0284c7, #6366f1);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -42,8 +43,8 @@
     }
     .badge {
       display: inline-block;
-      background: rgba(56, 189, 248, 0.15);
-      color: #38bdf8;
+      background: rgba(14, 165, 233, 0.12);
+      color: #0369a1;
       font-size: 0.75rem;
       font-weight: 600;
       letter-spacing: 0.05em;
@@ -51,10 +52,10 @@
       padding: 0.35rem 0.85rem;
       border-radius: 9999px;
       margin-bottom: 1.5rem;
-      border: 1px solid rgba(56, 189, 248, 0.3);
+      border: 1px solid rgba(14, 165, 233, 0.25);
     }
     p {
-      color: #94a3b8;
+      color: #475569;
       line-height: 1.6;
       margin-bottom: 1.75rem;
     }
@@ -64,12 +65,13 @@
       justify-content: center;
       gap: 0.5rem;
       font-size: 0.9rem;
-      color: #4ade80;
+      color: #16a34a;
+      font-weight: 500;
     }
     .dot {
       width: 8px;
       height: 8px;
-      background: #4ade80;
+      background: #22c55e;
       border-radius: 50%;
       animation: pulse 2s infinite;
     }
@@ -77,24 +79,48 @@
       0%, 100% { opacity: 1; }
       50% { opacity: 0.4; }
     }
+    .nav {
+      margin-top: 2rem;
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+    }
+    .nav a {
+      display: inline-block;
+      padding: 0.6rem 1.25rem;
+      background: #0ea5e9;
+      color: white;
+      text-decoration: none;
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .nav a:hover {
+      background: #0284c7;
+      transform: translateY(-1px);
+    }
     footer {
       margin-top: 2rem;
       font-size: 0.75rem;
-      color: #64748b;
+      color: #94a3b8;
     }
   </style>
 </head>
 <body>
   <div class="card">
-    <div class="badge">Mach Deploy Test</div>
+    <div class="badge">Mach Deploy Test · Light</div>
     <h1>Friendly Hours</h1>
     <p>
-      This is a custom test page deployed via the Mach one-time endpoint.<br>
-      If you can see this, the deployment pipeline is working.
+      Now running in light mode.<br>
+      Clean, bright, and ready for more pages.
     </p>
     <div class="status">
       <span class="dot"></span>
-      Live &amp; Ready
+      Live &amp; Updated
+    </div>
+    <div class="nav">
+      <a href="about.html">About →</a>
     </div>
     <footer>
       Generated for testing · friendlyhours.getmach.cloud
